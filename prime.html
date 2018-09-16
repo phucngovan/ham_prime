@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number=parseInt(prompt("nhập số: "))
+    let prime=function (num) {
+        if (num < 2) {
+            return false;
+        }
+        if (num === 2) {
+            return true;
+        } else {
+            for (let i = 2; i <= num / 2; i++) {
+                if (num % i == 0) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+    }
+    let rep="";
+    let result = prime(number);
+    if (result == true){
+        rep += +number + " là số nguyên tố";
+    }else{
+        rep += +number + " không phải là số nguyên tố";
+    } document.write(rep);
+
+</script>
+</body>
+</html>
